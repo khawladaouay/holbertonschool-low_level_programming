@@ -6,7 +6,7 @@
 /* betty style doc for function main goes there */
 /**
  * main - prints if number is positive
- *return: 0
+ *Return: 0
 */
 int main(void)
 {	int n;
