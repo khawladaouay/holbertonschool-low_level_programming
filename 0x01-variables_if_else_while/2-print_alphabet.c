@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
@@ -9,8 +7,8 @@
  *Return: 0
 */
 int main(void)
-{
-	for (char c = 'a'; c <= 'z'; ++c)
+{char c;
+	for (c = 'a'; c <= 'z'; ++c)
 	{
 	putchar(c);
 	}
