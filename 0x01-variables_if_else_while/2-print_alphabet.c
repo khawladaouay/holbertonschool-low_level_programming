@@ -1,15 +1,16 @@
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - prints if number is positive
- *Return: 0
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	char c;
-	for (c = 'a'; c <= 'z'; ++c)
+	
+	for (c = 'a'; c <= 'z'; c++)
 	{
 	putchar(c);
 	}
