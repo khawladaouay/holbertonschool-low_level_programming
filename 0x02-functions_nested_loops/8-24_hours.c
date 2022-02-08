@@ -13,9 +13,9 @@ void jack_bauer(void)
 	{
 		_putchar('0' + n);
 
-	}
-	_putchar(':');
 	
+	_putchar(':');
+	}
 	for (i = 0 ; i <= 5 ; i++)
 	{
 		_putchar('0' + i);
