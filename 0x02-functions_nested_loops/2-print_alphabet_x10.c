@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include "main.h"
 /**
  * print_alphabet_x10 - writes the character c to stdout
@@ -15,8 +14,8 @@ void print_alphabet_x10(void)
 	{char c;
 		for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(c);	
+		putchar(c);
 	}
-	_putchar('\n');
+	putchar('\n');
 	}	
 }
