@@ -7,7 +7,7 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int print_last_digit(int n)
-{ int n;
-
-	n= n % 10;
+{ int lg;
+lg= n % 10;
+return (lg);
 }
