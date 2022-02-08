@@ -7,6 +7,10 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int print_last_digit(int n)
-{
-return ( n % 10);
+{ int lg = n % 10;
+	if (lg < 0)
+	{
+		lg *= -1;
+		_putchar('0'+ lg);
+	}
 }
