@@ -14,20 +14,20 @@ void times_table(void)
 			m = i * j;
 		if (m != 0)
 		{
-			    if (m > 0 && m <= 9)
+			if (m > 0 && m <= 9)
 				{
 				printf(",  ");
 				}
-				else if (j <= 9 )
+				else if (j <= 9)
 				{
 				printf(", ");
 				}
 		}
 		else if (j > 0)
-		{ 
+		{
 			printf(",  ");
 		}
-				printf("%d",m);
+				printf("%d", m);
 		}
 		printf("\n");
 	}
