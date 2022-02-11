@@ -16,7 +16,7 @@ int main(void)
 	{
 		if ((n % f) == 0)
 		{
-			n = f;
+			lg = f;
 			n = n / f;
 			f = 1;
 		}
