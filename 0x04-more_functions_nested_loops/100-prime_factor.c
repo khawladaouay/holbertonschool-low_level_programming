@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 /**
  * main - check the code
  *
@@ -6,19 +7,19 @@
  */
 int main(void)
 {
-	long f, n;
+	long f, n, lg;
 
 	n = 612852475143;
-	f = 2;
-	while (f * f <= n)
+	for (f = 0; f < sqrt(n); f++)
 	{
-		while (n % f == 0)
+		if (n % f == 0)
 		{
+			n = f;
 			n /= f;
+			d = 1;
 		}
-		f++;
 	}
-	if (n > 1)
-	printf("%ld\n", f);
+	ln = n;
+	printf("%ld\n", lg);
 	return (0);
 }
