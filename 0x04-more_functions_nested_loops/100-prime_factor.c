@@ -21,7 +21,7 @@ int main(void)
 			f = 1;
 		}
 	}
-	ln = n;
+	lg = n;
 	printf("%ld\n", lg);
 	return (0);
 }
