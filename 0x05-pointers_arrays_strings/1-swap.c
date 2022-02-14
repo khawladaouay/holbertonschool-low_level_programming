@@ -7,7 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
- void swap_int(int *a, int *b)
+void swap_int(int *a, int *b)
 {int n;
 	n = *b;
 	*b = *a;
