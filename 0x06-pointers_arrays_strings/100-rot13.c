@@ -17,5 +17,5 @@ char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 		break;
 	}
 	}
-	return(s);
+	return (s);
 }
