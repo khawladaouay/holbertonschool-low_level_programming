@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  ** set_string- a function that copies memory area
- * @a: input
- * @size: input
+ * @s: input
+ * @to: input
  * Return: void
  */
 void set_string(char **s, char *to)
