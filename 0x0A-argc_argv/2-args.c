@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  * main-a program that prints all arguments it receives
- * @argc: input
- *@argv: input
- * return: int
+ * @argc: number of arguments
+ *@argv: array of arguments
+ * Return: always 0 (success)
  */
 int main(int argc, char *argv[])
 {int i;
