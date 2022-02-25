@@ -19,5 +19,5 @@ else
 		num *= atoi(argv[i]);
 	}
 	printf("%d\n", num);
-	return (0);
+	return (1);
 }
