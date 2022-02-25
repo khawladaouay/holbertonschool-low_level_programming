@@ -1,32 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
- * main - check the code
- * @argc: number of arguments aupplied to program
- * @argv: array that contains the arguments
- * Return: Always 0.
+ * main - entry point for program.
+ * @argc: count of args present.
+ * @argv: array of char * pointing to args.
+ * Return: always 0 (success).
  */
 int main(int argc, char *argv[])
 {
-	int result, i;
+	int i, j, sum = 0;
 
-	result = 0;
-	if (argc == 1)
-		printf("0\n");
-	else
-	{
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(*argv[i]))
+		for (j = 0; argv[i][j]; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-			result += atoi(argv[i]);
+
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", result);
-	}
+
+	printf("%d\n", sum);
+
 	return (0);
 }
