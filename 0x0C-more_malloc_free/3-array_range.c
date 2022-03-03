@@ -15,7 +15,7 @@ if (min > max)
 {
 	return (NULL);
 }
-a = max - min;
+a = max - min + 1;
 ptr = malloc(sizeof(int) * a);
 if (ptr == NULL)
 return (NULL);
