@@ -15,8 +15,6 @@ int op_add(int a, int b)
 {
 return (a + b);
 }
-#include <stdio.h>
-#include "3-calc.h"
 /**
  *  op_sub- return the difference
  * @a: input
@@ -27,8 +25,6 @@ int op_sub(int a, int b)
 {
 	return (a - b);
 }
-#include <stdio.h>
-#include "3-calc.h"
 /**
  *  op_mul- return the multiplication
  * @a: input
@@ -39,8 +35,6 @@ int op_mul(int a, int b)
 {
 	return (a * b);
 }
-#include <stdio.h>
-#include "3-calc.h"
 /**
  *  op_div- return the division
  * @a: input
@@ -51,8 +45,6 @@ int op_div(int a, int b)
 {
 	return (a / b);
 }
-#include <stdio.h>
-#include "3-calc.h"
 /**
  *  op_mod- return the modulo
  * @a: input
