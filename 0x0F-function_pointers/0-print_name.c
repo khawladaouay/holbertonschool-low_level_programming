@@ -7,7 +7,8 @@
  * Return: Void
  */
 void print_name(char *name, void (*f)(char *))
-{void (*pf)(char *);
-pf = f;
-	pf(name);
+{
+	void (*pf)(char *);
+		pf = f;
+		pf(name);
 }
