@@ -4,8 +4,10 @@
  * print_name - print a name
  * @name: name
  * @f: function
+ * Return: Void
  */
 void print_name(char *name, void (*f)(char *))
-{
-	f(name);
+{void (*pf)(char *);
+pf = f;
+	pf(name);
 }
