@@ -18,13 +18,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (a != NULL)
 			printf("%s", a);
 		else
-		{
 			printf("Nil");
-		}
 		if ((separator != NULL) && (i != n - 1))
-		{
-			printf("%s", separator);	
-		}
+			printf("%s", separator);
 	}
 	printf("\n");
 	va_end(ap);
