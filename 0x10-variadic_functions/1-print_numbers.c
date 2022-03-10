@@ -27,5 +27,5 @@ va_start(ap, n);
 		va_end(ap);
 	}
 }
-	_putchar('\n');
+	printf("\n");
 }
