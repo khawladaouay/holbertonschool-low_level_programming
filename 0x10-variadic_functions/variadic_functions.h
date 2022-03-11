@@ -11,6 +11,11 @@ void print_char(char *separator, va_list args);
 void print_int(char *separator, va_list args);
 void print_float(char *separator, va_list args);
 
+/**
+ * struct printer - Struct printer
+ * @type: The types
+ * @f: The function associated
+ */
 typedef struct printer
 {
 	char *type;
