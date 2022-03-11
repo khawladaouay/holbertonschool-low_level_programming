@@ -2,27 +2,30 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- * print_all - function that prints anything
- * @format: input
+ * print_all - prints all parameters
+ * @format: format for parameters
+ * Return: void
  */
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
-	pr_t printer[] = {{"c", print_char},
-				{"i", print_int},
-				{"f", print_float},
-				{"s", print_string}
-				};
-				va_list args;
-				int i, j;
-				char *separator = "";
+	va_list args;
 
-				va_start(args, format);
-				i = 0;
-	while (format[i] && format != NULL)
-	{ j = 0;
+	pr_t printer[] = {{"c", print_char},
+					  {"s", print_string},
+					  {"f", print_float},
+					  {"i", print_int}};
+	int i, j = 0;
+
+	char *separator = "";
+
+	va_start(args, format);
+
+	while (format != NULL && format[i])
+	{
+		j = 0;
 		while (j < 4)
 		{
-			if (*printer[j].type == format[i])
+			if (format[i] == *printer[j].type)
 			{
 				printer[j].f(separator, args);
 				separator = ", ";
@@ -35,11 +38,11 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 /**
- * print_string - function that prints strings
- * @args: list of argument
- * @separator: separator string
+ * print_string - prints a string
+ * @separator: separator
+ * @args: list of variadic args
+ * Return: void
  */
-
 void print_string(char *separator, va_list args)
 {
 	char *arg = va_arg(args, char *);
@@ -52,27 +55,30 @@ void print_string(char *separator, va_list args)
 	printf("%s%s", separator, arg);
 }
 /**
- * print_char - function that prints char
- * @args: list of argument
- * @separator: separator string
+ * print_char - prints a character
+ * @separator: separator
+ * @args: list of variadic args
+ * Return: void
  */
 void print_char(char *separator, va_list args)
 {
-	printf("%s%c", separator, va_arg(args, char));
+	printf("%s%c", separator, va_arg(args, int));
 }
 /**
- * print_int - function that prints int
- * @args: list of argument
- * @separator: separator string
+ * print_int - prints an integer
+ * @separator: separator
+ * @args: list of variadic args
+ * Return: void
  */
 void print_int(char *separator, va_list args)
 {
-	printf("%s%d", separator, va_arg(args, int));
+	printf("%s%i", separator, va_arg(args, int));
 }
 /**
- * print_float - function that prints float
- * @args: list of argument
- * @separator: separator string
+ * print_float - prints a float
+ * @separator: separator
+ * @args: list of variadic args
+ * Return: void
  */
 void print_float(char *separator, va_list args)
 {
