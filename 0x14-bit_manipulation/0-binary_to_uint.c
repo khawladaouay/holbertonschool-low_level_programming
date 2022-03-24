@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 /**
  * _pow - a to the power of b
  * @a: base
