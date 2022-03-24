@@ -29,7 +29,9 @@ unsigned int _pow(unsigned int a, unsigned int b)
 unsigned int binary_to_uint(const char *b)
 {unsigned int u = 0, j, len;
 if (b == NULL)
+{
 	return (0);
+}
 	len = strlen(b) - 1;
 	for (j = 0; b[j] != '\0'; j++)
 	{
