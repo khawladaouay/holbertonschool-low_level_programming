@@ -14,8 +14,6 @@ if (fd == -1)
 return (-1);
 if (text_content != NULL)
 	wr = write(fd, text_content, length);
-	else
-	wr = write(fd, 0, 0);
 	if (wr == -1)
 	return (-1);
 	close(fd);
