@@ -7,17 +7,20 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, length = strlen(text_content) - 1;
-	char *buf = malloc(sizeof(char) * length);
+	int fd, wr, length = strlen(text_content) - 1;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 	return (-1);
-	fd = open(filename, O_RDONLY | O_WRONLY);
+	fd = open(filename, O_RDONLY | O_WRONLY | O_TRUNC);
 
 	if (fd == -1)
 	return (-1);
-	for (i=0; text_content[i] != '\0'; i++)
-	write(1, buf, length);
+	if (text_content != NULL)
+	wr = write(fd, text_content, length);
+	else
+	wr = write(fd, 0, 0);
+	if (wr == -1)
+	return (-1);
 	close(fd);
 	return (1);
 }
